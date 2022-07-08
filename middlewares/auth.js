@@ -1,0 +1,20 @@
+const jwt = require('jsonwebtoken');
+const AuthorizationError = require('../errors/AuthorizationError');
+// require('dotenv').config();
+
+const { JWT_SECRET_KEY = 'test' } = process.env;
+
+module.exports = (req, res, next) => {
+  const cookieAuthorization = req.cookies.jwt;
+  if (!cookieAuthorization) {
+    return next(new AuthorizationError('Ошибка авторизации'));
+  }
+  let payload;
+  try {
+    if (cookieAuthorization != null) payload = jwt.verify(cookieAuthorization, JWT_SECRET_KEY);
+  } catch (err) {
+    return next(new AuthorizationError('Необходима авторизация'));
+  }
+  req.user = payload;
+  return next();
+};
