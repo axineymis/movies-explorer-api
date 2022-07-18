@@ -55,8 +55,10 @@ module.exports.deleteMovie = (req, res, next) => {
     .then((movie) => {
       if (!movie) next(new NotFoundError('Видео с таким ID не существует'));
       if (req.user._id !== movie.owner._id.toString()) throw new AccessError('Невозможно удалить чужое видео');
-      Movie.findByIdAndRemove(req.params.movieId)
-        .then((deleteMovie) => res.send(deleteMovie))
+      Movie.findByIdAndDelete(req.params.movieId)
+        .then((movieData) => {
+          res.send({ data: movieData });
+        })
         .catch(next);
     })
     .catch((err) => {

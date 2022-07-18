@@ -33,8 +33,9 @@ module.exports.createUser = (req, res, next) => {
     .catch((err) => {
       if (err.code === 11000) {
         next(new ConflictError('Пользователь с таким EMAIL уже зарегистрирован'));
+      } else {
+        next(err);
       }
-      next(err);
     });
 };
 
@@ -45,7 +46,7 @@ module.exports.patchProfile = (req, res, next) => {
     .then((user) => res.send({ _id: user._id, name, email }))
     .catch((err) => {
       if (err.name === 'ValidationError') {
-        next(ValidationError('Переданы некорректные данные'));
+        next(new ValidationError('Переданы некорректные данные'));
       }
       next(err);
     });
@@ -74,7 +75,7 @@ module.exports.getMe = (req, res, next) => {
   User.findById({ _id })
     .then((user) => {
       if (!user) {
-        next(new NotFoundError('Некорректный id пользователя'));
+        next(new NotFoundError('Не найден пользователь по указанному ID'));
       }
       return res.send(user);
     })
