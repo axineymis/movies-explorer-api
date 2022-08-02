@@ -27,9 +27,10 @@ const cors = require('./middlewares/cors');
 const routes = require('./routes');
 const limiter = require('./middlewares/limiter');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const errorCatcher = require('./errors/errorCatcher');
 
 app.use(cors);
+
+const errorCatcher = require('./errors/errorCatcher');
 
 app.use(requestLogger);
 
