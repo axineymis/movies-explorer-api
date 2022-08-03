@@ -1,13 +1,18 @@
-export const moviesApiAddress = "https://api.nomoreparties.co";
+export const moviesApiAddress = "http://localhost:3000";
 
-export const mainApiAddress = "https://api.lookatme.nomoreparties.sbs";
+export const mainApiAddress = "http://localhost:3001";
 
 export const passwordPattern = /[0-9a-z-а-яё]+/g;
 export const namePattern = /[a-z-. а-яё]+/g;
 export const allowedSymbolsPattern = /[_~!@#$%^&*()\[\]+`'";:<>\/\\|=]/g;
 
 
-
+export const errMessages = {
+  409: "Пользователь с таким email уже существует",
+  401: "Вы ввели неправильный логин или пароль / пользователь не зарегистрирован",
+  500: "На сервере произошла ошибка",
+  400: "Введены некорректные данные, проверьте правильность ввода",
+};
 
 export const validationMessages = {
   name: "Имя содержит недопустимые символы. Имя может содержать латинские буквы, кириллицу, пробел и дефис.",
