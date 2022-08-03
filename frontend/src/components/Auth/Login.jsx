@@ -21,6 +21,7 @@ function Login() {
   const { validationState, setValidationState } = store;
   const [requestMessage, setRequestMessage] = useState('');
   const history = useHistory();
+  
   const [disabledInput, setDisabledInput] = useState(false);
   const [form, setForm] = useState({ email: '', password: '' });
 

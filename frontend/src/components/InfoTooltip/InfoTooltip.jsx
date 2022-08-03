@@ -1,17 +1,56 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { InfoToolTipContext } from '../../contexts/infotooltip-context';
 import tooltip from '../../images/tooltip.png';
+import imageSuccess from '../../images/success.png';
+
+
 function InfoToolTip() {
-  const [isPopupOpen, setPopupOpen] = useState(false);
+  const { toolTipState, setToolTipState } = useContext(InfoToolTipContext);
+  const { isOpen, message, success } = toolTipState;
+
+
   function closePopup() {
-    setPopupOpen(true);
+    setToolTipState({ ...toolTipState, isOpen: false, message: '' });
   }
+
+  function removeListners() {
+    document.removeEventListener('keydown', closePopupByEsc);
+    document.removeEventListener('click', closePopupByOverlay);
+  }
+
+  function closePopupByEsc(e) {
+    if (e.code === 'Escape') {
+      removeListners();
+      return closePopup();
+    }
+  }
+
+  function closePopupByOverlay(e) {
+    const element = e.target;
+    if (element.classList.contains('popup_opened')) {
+      removeListners();
+      closePopup();
+    }
+  }
+
+  useEffect(() => {
+    if (isOpen) {
+      document.addEventListener('keydown', closePopupByEsc);
+      document.addEventListener('click', closePopupByOverlay);
+    }
+    return () => {
+      removeListners();
+    };
+  }, [isOpen]);
+
+
   return (
-    <div className={`popup ${isPopupOpen && 'popup_opened'}`}>
+    <div className={`popup ${isOpen && 'popup_opened'}`}>
       <div className='popup__container' style={{ alignItems: 'center' }}>
         <img
           className='tooltipPic'
           style={{ width: 120, paddingTop: 60 }}
-          src={tooltip}
+          src={success ? imageSuccess : tooltip}
           alt='Ошибка'
         ></img>
         <button
@@ -23,7 +62,7 @@ function InfoToolTip() {
           className='popup__heading'
           style={{ textAlign: 'center', margin: 36 }}
         >
-          Что-то пошло не так!
+          {message}
         </h2>
       </div>
     </div>

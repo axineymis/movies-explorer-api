@@ -8,10 +8,10 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import './Main.css';
 
-function Main({ loggedIn }) {
+function Main() {
   return (
     <main className='content'>
-      <Header loggedIn={loggedIn} />
+      <Header />
       <Promo />
       <AboutProject />
       <Techs />
