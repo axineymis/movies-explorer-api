@@ -108,16 +108,17 @@ function Profile() {
       <form className='profile__form' onSubmit={handleSubmit}>
         <div className='profile__inputs'>
           <label className='profile__input-name'>Имя</label>
-          <input className={`profile__input ${
+          <input
+            className={`profile__input ${
               validationState.profile.errors.name && 'profile__input_error'
             }`}
-            required 
-            type='text' 
-            name='email' 
+            required
+            type='text'
+            name='name'
             onChange={handleChange}
             value={form.name}
             minLength={2}
-            />
+          />
         </div>
         <div className='profile__inputs'>
           <label className='profile__input-name'>E-mail</label>

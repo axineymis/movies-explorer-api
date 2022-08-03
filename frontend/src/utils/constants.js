@@ -1,4 +1,4 @@
-export const moviesApiAddress = "http://localhost:3000";
+export const moviesApiAddress = "https://api.nomoreparties.co";
 
 export const mainApiAddress = "http://localhost:3001";
 
@@ -25,8 +25,6 @@ export const updateWidth = (width) => {
     return { _initCount: 5, _count: 2 };
   }
   if (width <= 768) {
-    return { _initCount: 8, _count: 2 };
-  } else {
-    return { _initCount: 12, _count: 3 };
+    return { _initCount: 7, _count: 7 };
   }
 };
