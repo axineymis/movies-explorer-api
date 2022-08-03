@@ -21,10 +21,9 @@ export const validationMessages = {
 };
 
 export const updateWidth = (width) => {
-  if (width <= 480) {
-    return { _initCount: 5, _count: 2 };
-  }
   if (width <= 768) {
+    return { _initCount: 5, _count: 2 };
+  } else {
     return { _initCount: 7, _count: 7 };
   }
 };
