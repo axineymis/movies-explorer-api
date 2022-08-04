@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 
-const ValidationError = require('../errors/ValidationError');
+// const ValidationError = require('../errors/ValidationError');
 const ConflictError = require('../errors/ConflictError');
 const NotFoundError = require('../errors/NotFoundError');
 
@@ -47,7 +47,7 @@ module.exports.patchProfile = (req, res, next) => {
     { name, email },
     { runValidators: true },
   );
-    User.find({ email })
+  User.find({ email })
     .then(([user]) => {
       if (user && user._id.toString() !== req.user._id) {
         // console.log(user._id === req.user._id);
@@ -60,7 +60,7 @@ module.exports.patchProfile = (req, res, next) => {
       res.send({
         name,
         email,
-      })
+      });
     })
     // .catch((err) => {
     //   if (err.name === 'ValidationError') {

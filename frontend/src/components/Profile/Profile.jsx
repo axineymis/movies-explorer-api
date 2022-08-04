@@ -55,6 +55,7 @@ function Profile() {
     setValidationState(newState(validationState));
     setForm({ ...form, [e.target.name]: e.target.value });
   }
+
   function handleLogout() {
     localStorage.clear();
     setMoviesState(defaultMovieState);
@@ -142,7 +143,7 @@ function Profile() {
         </button>
       </form>  
         <Link to='/signin'>
-          <button className='profile__exit' tonClick={handleLogout}>
+          <button className='profile__exit' onClick={handleLogout}>
             Выйти из аккаунта
           </button>
         </Link>
