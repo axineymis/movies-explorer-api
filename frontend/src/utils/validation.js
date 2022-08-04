@@ -1,11 +1,10 @@
 import validator from "validator";
 
-import {
-  allowedSymbolsPattern,
-  namePattern,
-  passwordPattern,
-  validationMessages,
-} from "./constants";
+import { validationMessages } from "./constants";
+
+export const allowedSymbolsPattern = /[_~!@#$%^&*()\[\]+`'";:<>\/\\|=]/g;
+export const passwordPattern = /[0-9a-z-а-яё]+/g;
+export const namePattern = /[a-z-. а-яё]+/g;
 
 export const isEmail = (email) => {
   return !validator.isEmail(email) ? validationMessages.email : "";

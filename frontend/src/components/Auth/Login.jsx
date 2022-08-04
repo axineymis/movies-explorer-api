@@ -33,15 +33,15 @@ function Login() {
     [validationState.login.errors],
   );
 
-  function handleChange(e) {
+  function handleChange(evt) {
     setRequestMessage('');
-    const { newState } = checkValidation(e, 'login');
+    const { newState } = checkValidation(evt, 'login');
     setValidationState(newState(validationState));
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm({ ...form, [evt.target.name]: evt.target.value });
   }
 
   function getUser() {
-    const moviesStorage = JSON.parse(localStorage.getItem('movies'));
+    const movies = JSON.parse(localStorage.getItem('movies'));
     mainApi
       .setProfileInfo()
       .then(({ _id, name, email }) => {
@@ -52,8 +52,8 @@ function Login() {
           message: 'Вы успешно вошли',
           success: true,
         });
-        if (moviesStorage) {
-          setMoviesState(moviesStorage);
+        if (movies) {
+          setMoviesState(movies);
         }
       })
       .catch((err) => {
@@ -67,8 +67,8 @@ function Login() {
       });
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(evt) {
+    evt.preventDefault();
     setDisabledInput(true);
     mainApi
       .login(form)

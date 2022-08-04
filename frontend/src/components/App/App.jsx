@@ -36,9 +36,9 @@ function App() {
 
   useEffect(() => {
     setRequest(true);
-    const moviesStorage = JSON.parse(localStorage.getItem('movies'));
-    if (moviesStorage) {
-      setMoviesState(moviesStorage);
+    const movies = JSON.parse(localStorage.getItem('movies'));
+    if (movies) {
+      setMoviesState(movies);
     }
     mainApi
       .setProfileInfo()
