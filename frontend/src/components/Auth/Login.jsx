@@ -61,7 +61,7 @@ function Login() {
         setToolTipState({
           ...toolTipState,
           isOpen: true,
-          message: 'Не удалось войти в аккаунт',
+          message: 'Не удалось войти в аккаунта',
           success: false,
         });
       });

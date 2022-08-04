@@ -19,7 +19,7 @@
   .navigation__list_logged {
     width: 100%;
   }
-  
+
   .navigation__item:last-child {
     flex: 1;
     text-align: end;
@@ -48,18 +48,13 @@
   }
   
   .navigation__profile {
-    /* background-color: rgba(249, 249, 249, 1); */
     background-image: url(../../images/profile.svg);
     background-repeat: no-repeat;
     box-sizing: border-box;
     background-position: center;
-    /* width: 100%; */
-    /* width: 100px; */
-    /* background-color: rgba(249, 249, 249, 1);  */
+    margin-top: 100px;
     padding: 30px 5px 30px 100px;
-    /* border-radius: 20px; */
-    /* font-size: 14px; */
-    /* height: 30px; */
+   
   }
   
   .navigation__login {
