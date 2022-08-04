@@ -20,6 +20,7 @@ export const validationMessages = {
   password: "Пароль содержит не допустимые символы. Пароль может содержать цифры, латиницу, кириллицу, дефис.",
 };
 
+//определение количества карточек в зависимости от ширины экрана
 export const updateWidth = (width) => {
   if (width <= 768) {
     return { _initCount: 5, _count: 2 };

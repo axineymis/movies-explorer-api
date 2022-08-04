@@ -29,7 +29,7 @@ function Profile() {
   });
 
   useEffect(() => {
-    mainApi.getUserInfo().then((user) => {
+    mainApi.setProfileInfo().then((user) => {
       setUserState({
         ...userState,
         name: user.name,

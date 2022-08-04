@@ -7,7 +7,7 @@ import Profile from '../Profile/Profile';
 import Login from '../Auth/Login';
 import Register from '../Auth/Register';
 import PageNotFound from '../PageNotFound/PageNotFound';
-// import './App.css';
+import './App.css';
 
 import {
   CurrentUserContext,
@@ -41,7 +41,7 @@ function App() {
       setMoviesState(moviesStorage);
     }
     mainApi
-      .getUserInfo()
+      .setProfileInfo()
       .then(({ _id, name, email }) => {
         setUserState({ ...userState, _id, name, email, loggedIn: true });
       })

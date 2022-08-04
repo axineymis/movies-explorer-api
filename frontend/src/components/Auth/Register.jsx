@@ -45,7 +45,7 @@ function Register(props) {
 
   function getUser() {
     mainApi
-      .getUserInfo()
+      .setProfileInfo()
       .then(({ _id, name, email }) => {
         setUserState({ ...userState, _id, name, email, loggedIn: true });
       })

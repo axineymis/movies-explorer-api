@@ -34,7 +34,7 @@ class MainApi {
     }).then(this._handleResponse);
   }
 
-  async getUserInfo() {
+  async setProfileInfo() {
     return await fetch(`${this._address}/users/me`, {
       credentials: "include",
       headers: this._headers,

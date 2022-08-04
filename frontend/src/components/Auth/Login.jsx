@@ -43,7 +43,7 @@ function Login() {
   function getUser() {
     const moviesStorage = JSON.parse(localStorage.getItem('movies'));
     mainApi
-      .getUserInfo()
+      .setProfileInfo()
       .then(({ _id, name, email }) => {
         setUserState({ ...userState, _id, name, email, loggedIn: true });
         setToolTipState({
@@ -87,7 +87,7 @@ function Login() {
   }
 
   useEffect(() => {
-    mainApi.getUserInfo().then((user) => {});
+    mainApi.setProfileInfo().then((user) => {});
 
     if (userState.loggedIn) {
       history.push('/movies');
@@ -145,20 +145,6 @@ function Login() {
         >
           Войти
         </button>
-        {/* <p className='auth__name'>E-mail</p>
-        <input className='auth__input' required type='text' name='email' />
-        <p className='auth__name'>Пароль</p>
-        <input
-          className='auth__input'
-          required
-          type='password'
-          name='password'
-          minLength='8'
-          maxLength='16'
-        />
-        <button className='auth__submitBtn auth__submitBtn_login' type='submit'>
-          Войти
-        </button> */}
       </form>
       <div className='auth__redirect'>
         <p className='auth__redirect-text'>Еще не зарегистрированы?</p>
