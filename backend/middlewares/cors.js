@@ -8,6 +8,8 @@ const allowedCors = [
   'https://praktikum.tk',
   'http://praktikum.tk',
   'localhost:3000',
+  'http://api.diplom.axineymis.nomoredomains.xyz',
+  'https://api.diplom.axineymis.nomoredomains.xyz',
 ];
 
 module.exports = (function (req, res, next) {
