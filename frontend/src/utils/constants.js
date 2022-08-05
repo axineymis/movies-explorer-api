@@ -1,6 +1,6 @@
 export const moviesApiAddress = "https://api.nomoreparties.co";
 
-export const mainApiAddress = "http://localhost:3001";
+export const mainApiAddress = "https://api.diplom.axineymis.nomoredomains.xyz";
 
 
 export const errMessages = {
