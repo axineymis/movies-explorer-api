@@ -73,4 +73,4 @@ export function checkValidation(event, typeForm) {
         }),
       };
   }
-}
+} 

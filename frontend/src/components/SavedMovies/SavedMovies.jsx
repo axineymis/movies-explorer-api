@@ -111,4 +111,4 @@ function SavedMovies() {
   );
 }
 
-export default SavedMovies;
+export default SavedMovies; 

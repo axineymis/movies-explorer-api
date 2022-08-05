@@ -22,4 +22,4 @@ const Techs = forwardRef((props, ref) => {
   );
 });
 
-export default Techs;
+export default Techs; 

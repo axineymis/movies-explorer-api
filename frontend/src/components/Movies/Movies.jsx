@@ -152,4 +152,4 @@ function Movies() {
   );
 }
 
-export default Movies;
+export default Movies; 

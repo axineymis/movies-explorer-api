@@ -86,4 +86,4 @@ const mainApi = new MainApi({
   address: mainApiAddress,
 });
 
-export default mainApi;
+export default mainApi; 

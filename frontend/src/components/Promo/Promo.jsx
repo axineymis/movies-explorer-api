@@ -13,4 +13,4 @@ function Promo() {
   );
 }
 
-export default Promo;
+export default Promo; 

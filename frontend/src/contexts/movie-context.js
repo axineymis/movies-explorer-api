@@ -14,4 +14,4 @@ export const defaultMovieState = {
   notFoundSavedMovies: false,
 };
 
-export const MovieContext = createContext();
+export const MovieContext = createContext(); 

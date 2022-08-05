@@ -14,4 +14,4 @@ function ProtectedRoute({ component: Component, path }) {
   );
 }
 
-export default ProtectedRoute;
+export default ProtectedRoute; 

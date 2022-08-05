@@ -20,4 +20,4 @@ const moviesApi = new MoviesApi({
   address: moviesApiAddress
 });
 
-export default moviesApi;
+export default moviesApi; 

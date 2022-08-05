@@ -50,4 +50,4 @@ function MovieCard({ movie, handleClickLike }) {
   );
 }
 
-export default MovieCard;
+export default MovieCard; 

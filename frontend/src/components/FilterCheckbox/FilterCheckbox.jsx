@@ -15,4 +15,4 @@ function FilterCheckbox({ toggleCheckbox, checkbox }) {
   );
 }
 
-export default FilterCheckbox;
+export default FilterCheckbox; 

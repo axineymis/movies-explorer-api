@@ -27,4 +27,4 @@ function Input({ title, onChange, name, type, error, disabled }) {
   );
 }
 
-export default Input;
+export default Input; 

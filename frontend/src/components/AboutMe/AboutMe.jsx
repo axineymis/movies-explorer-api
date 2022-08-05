@@ -34,4 +34,4 @@ const AboutMe = forwardRef((props, ref) => {
   );
 });
 
-export default AboutMe;
+export default AboutMe; 
