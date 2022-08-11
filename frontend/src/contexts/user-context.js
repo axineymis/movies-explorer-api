@@ -7,4 +7,4 @@ export const defaultUserState = {
   loggedIn: false,
 };
 
-export const CurrentUserContext = createContext(null);
+export const CurrentUserContext = createContext(null); 

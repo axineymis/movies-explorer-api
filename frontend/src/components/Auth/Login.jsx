@@ -129,13 +129,6 @@ function Login() {
             disabled={disabledInput}
           />
         </div>
-        <p
-          className={`auth__error-message ${
-            requestMessage && 'auth__error-message_active'
-          }`}
-        >
-          {requestMessage}
-        </p>
         <button
           className={`auth__submitBtn auth__submitBtn_login ${
             disabledButton && 'auth__submitBtn_disabled'
@@ -157,4 +150,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default Login; 

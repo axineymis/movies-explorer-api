@@ -6,5 +6,5 @@
 
 **Frontend** https://diplom.axineymis.nomoredomains.xyz/
 
-**Figma** https://www.figma.com/file/cASM20ikAsPlTi2doec68Q/Diploma?node-id=932%3A3320
+**Pull requests** https://github.com/axineymis/movies-explorer-api/pull/4
 

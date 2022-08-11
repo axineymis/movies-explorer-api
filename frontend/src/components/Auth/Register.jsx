@@ -140,20 +140,6 @@ function Register(props) {
           />
 
       </div>
-        {/* <p className='auth__name'>Имя</p>
-        <input className='auth__input' required type='text' name='name' />
-        <p className='auth__name'>E-mail</p>
-        <input className='auth__input' required type='text' name='email' />
-        <p className='auth__name'>Пароль</p>
-        <input className='auth__input'  type='password' name='password' required /> */}
-        
-        {/* <p
-          className={`auth__error-message ${
-            requestMessage && 'auth__error-message_active'
-          }`}
-        >
-          {requestMessage}
-        </p> */}
         <button
           className={`auth__submitBtn ${
             disabledButton && 'auth__submitBtn_disabled'
@@ -175,4 +161,4 @@ function Register(props) {
   );
 }
 
-export default Register;
+export default Register; 

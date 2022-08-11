@@ -6,4 +6,4 @@ export const defaultInfoToolTipState = {
   success: false
 };
 
-export const InfoToolTipContext = createContext();
+export const InfoToolTipContext = createContext(); 

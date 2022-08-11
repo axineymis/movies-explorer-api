@@ -69,4 +69,4 @@ function InfoToolTip() {
   );
 }
 
-export default InfoToolTip;
+export default InfoToolTip; 
