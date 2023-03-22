@@ -23,11 +23,6 @@ Movies Explorer - это Дипломный проект на Я.Практик�
 ![Снимок экрана 2022-08-11 211120](https://user-images.githubusercontent.com/91389755/184209764-ed9da80f-6442-4412-934f-b5f91ac4506a.png)
 
 
-#### Адрес публичного IP - 10.128.0.23
-
-Сайт - https://diplom.axineymis.nomoredomains.xyz
-
-API - https://api.diplom.axineymis.nomoredomains.xyz
 
 ### 🚀 Запуск проекта (локально):
 
